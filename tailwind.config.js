@@ -4,7 +4,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'outer-qr': "url('/public/bg1.png')",
+        'inner-qr': "url('/public/bg2.png')"
+      },
+      colors:{
+        qrBlue:{
+
+        },
+      },
+    },
   },
   plugins: [],
 }
