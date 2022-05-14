@@ -5,16 +5,13 @@ import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 
-export default function MediaButtonBar({ onUploadImage }) {
+export default function MediaButtonBar({ onUploadImage, onUploadText }) {
   function logToConsole(text) {
     console.log(text);
   }
   return (
     <div className="flex flex-row w-full space-x-1 justify-center">
-      <IconButtonSquare
-        onClick={() => logToConsole("Type Message")}
-        icon={faMessage}
-      />
+      <IconButtonSquare onClick={onUploadText} icon={faMessage} />
       <IconButtonSquare onClick={onUploadImage} icon={faImage} />
       <IconButtonSquare
         onClick={() => logToConsole("Upload Song")}

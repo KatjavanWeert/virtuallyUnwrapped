@@ -1,4 +1,4 @@
-export default function PhotoFrame({ photo }) {
+export default function PhotoFrame({ photo, children }) {
   return (
     <div className="relative h-80 w-80">
       <img
@@ -13,6 +13,7 @@ export default function PhotoFrame({ photo }) {
         src="/frame2.png"
         className="absolute object-center object-fill h-full w-full"
       />
+      {children}
     </div>
   );
 }

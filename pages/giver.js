@@ -22,13 +22,19 @@ export default function GiverPage() {
       : setOpacityQR("opacity-60");
   }
 
+  function uploadText() {
+    console.log("upload text");
+  }
+
   const [selectedImage, setSelectedImage] = useState("/bg2.png");
   const [showMediaPanel, setShowMediaPanel] = useState(false);
   const [opacityQR, setOpacityQR] = useState("opacity-100");
+  const [textUpload, setTextUpload] = useState("Write your message here");
   const inputRef = useRef(null);
 
   return (
     <div className="relative h-screen w-full ">
+      {/* Background & header */}
       <img
         src="/bg1.png"
         className="absolute object-bottom object-cover h-full w-full"
@@ -40,6 +46,8 @@ export default function GiverPage() {
           subtitle={"For every future gift recipient"}
         />
       </div>
+
+      {/* QR Animation */}
       <div
         className={
           "absolute bottom-[20%] w-full flex flex-col items-center space-y-6 " +
@@ -48,6 +56,8 @@ export default function GiverPage() {
       >
         <QRAnimation />
       </div>
+
+      {/* UI Overlay */}
       <div className="absolute w-full top-[20%]">
         <div className="flex flex-col w-full items-center">
           {showMediaPanel == false && (
@@ -56,10 +66,24 @@ export default function GiverPage() {
               onClick={() => toggleMediaUpload()}
             />
           )}
+
           {showMediaPanel == true && (
             <div className="pt-26 space-y-2">
-              <MediaButtonBar onUploadImage={() => inputRef.current.click()} />
-              <PhotoFrame photo={selectedImage} />
+              <MediaButtonBar
+                onUploadImage={() => inputRef.current.click()}
+                onUploadText={() => uploadText()}
+              />
+              <PhotoFrame photo={selectedImage}>
+                <textarea
+                  className="absolute p-10 bg-transparent text-center w-80 h-80 font-bold text-qrBlue text-lg"
+                  value={textUpload}
+                  onChange={(event) => {
+                    setTextUpload(event.target.value);
+                    console.log(textUpload);
+                  }}
+                />
+              </PhotoFrame>
+
               <div className="flex flex-row w-full space-x-48 justify-center">
                 <IconButton
                   icon={faTrashCan}

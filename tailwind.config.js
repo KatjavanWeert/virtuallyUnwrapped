@@ -6,15 +6,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'outer-qr': "url('/public/bg1.png')",
-        'inner-qr': "url('/public/bg2.png')"
+        "outer-qr": "url('/public/bg1.png')",
+        "inner-qr": "url('/public/bg2.png')",
       },
-      colors:{
-        qrBlue:{
-
-        },
+      colors: {
+        qrBlue: "#35a9a5",
       },
     },
   },
   plugins: [],
-}
+};
