@@ -60,7 +60,7 @@ export default function GiverPage() {
             <div className="pt-26 space-y-2">
               <MediaButtonBar onUploadImage={() => inputRef.current.click()} />
               <PhotoFrame photo={selectedImage} />
-              <div className="flex flex-row w-full space-x-60 justify-center">
+              <div className="flex flex-row w-full space-x-48 justify-center">
                 <IconButton
                   icon={faTrashCan}
                   onClick={() => toggleMediaUpload()}
