@@ -10,7 +10,11 @@ module.exports = {
         "inner-qr": "url('/public/bg2.png')",
       },
       colors: {
-        qrBlue: "#35a9a5",
+        qrBlue: {
+          light: "#75acd3",
+          DEFAULT: "#3982b5",
+          dark: "#184869",
+        },
       },
     },
   },

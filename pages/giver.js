@@ -6,6 +6,7 @@ import IconButton from "@components/IconButton";
 import PhotoFrame from "@components/PhotoFrame";
 import MediaButtonBar from "@components/MediaButtonBar";
 import QRAnimation from "@components/QRAnimation";
+import TextButton from "@components/TextButton";
 import React, { useState, useRef, useEffect } from "react";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
@@ -55,28 +56,18 @@ export default function GiverPage() {
   }, [mediaType]);
 
   return (
-    <div className="relative h-screen w-full ">
-      {/* Background & header */}
-      <img
-        src="/bg1.png"
-        className="absolute object-bottom object-cover h-full w-full"
-      />
+    <div className="relative h-screen w-full">
+      {/* QR Animation */}
+      <div className={"transition ease-in " + opacityQR}>
+        <QRAnimation />
+      </div>
+
       <div className="absolute object-top px-6 pt-4 flex flex-row">
         <Header
           icon={faEarthAmericas}
           title={"PUBLIC SPACE"}
           subtitle={"For every future gift recipient"}
         />
-      </div>
-
-      {/* QR Animation */}
-      <div
-        className={
-          "absolute bottom-[20%] w-full flex flex-col items-center space-y-6 " +
-          opacityQR
-        }
-      >
-        <QRAnimation />
       </div>
 
       {/* UI Overlay */}
@@ -130,6 +121,9 @@ export default function GiverPage() {
               </div>
             </div>
           )}
+        </div>
+        <div className="fixed bottom-10 right-10">
+          <TextButton>Show preview</TextButton>
         </div>
       </div>
 

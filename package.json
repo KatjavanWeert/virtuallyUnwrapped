@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "devh": "next dev -H 192.168.188.41", 
     "build": "next build",
     "export": "next export"
   },

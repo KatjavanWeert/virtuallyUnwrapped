@@ -11,24 +11,36 @@ export default function MediaButtonBar({ onUploadImage, onUploadText }) {
   }
   return (
     <div className="flex flex-row w-full space-x-1 justify-center">
-      <IconButtonSquare onClick={onUploadText} icon={faMessage} />
-      <IconButtonSquare onClick={onUploadImage} icon={faImage} />
       <IconButtonSquare
-        onClick={() => logToConsole("Upload Song")}
-        icon={faSpotify}
+        onClick={onUploadText}
+        icon={faMessage}
+        available={true}
       />
       <IconButtonSquare
-        onClick={() => logToConsole("Choose Video")}
-        icon={faVideo}
+        onClick={onUploadImage}
+        icon={faImage}
+        available={true}
       />
-      {/* GIF button needs to be custom made as there is no free icon*/}
-      <button
-        onClick={() => logToConsole("Choose GIF")}
-        className="rounded-lg border-2 border-white w-12 h-12
+      <div className="opacity-40 space-x-1">
+        <IconButtonSquare
+          onClick={() => logToConsole("Upload Song")}
+          icon={faSpotify}
+          available={false}
+        />
+        <IconButtonSquare
+          onClick={() => logToConsole("Choose Video")}
+          icon={faVideo}
+          available={false}
+        />
+        {/* GIF button needs to be custom made as there is no free icon*/}
+        <button
+          onClick={() => logToConsole("Choose GIF")}
+          className="rounded-lg border-2 border-white w-12 h-12
   active:bg-neutral-50/50 select-none"
-      >
-        <p className="font-bold text-xl text-white pb-1">GIF</p>
-      </button>
+        >
+          <p className="font-bold text-xl text-white pb-1">GIF</p>
+        </button>
+      </div>
     </div>
   );
 }
