@@ -67,7 +67,7 @@ export default function GiverIntroductionPage() {
             <>
               <FloatingText>Ready to create your gift?</FloatingText>
               <div className="fixed bottom-20">
-                <Link href="/giverPersonalization">
+                <Link href="/giverSelectGift">
                   <TextButton>Let's make this gift special!</TextButton>
                 </Link>
               </div>
