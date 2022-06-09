@@ -42,7 +42,7 @@ export default function GiverPersonalizationPage() {
   const [textUpload, setTextUpload] = useState("");
   const [imageUpload, setImageUpload] = useState(null);
   const inputRef = useRef(null);
-  const [bgImg, setBgImg] = useState("/bg2.png");
+  const [bgImg, setBgImg] = useState("/bg1.png");
 
   useEffect(() => {
     console.log(mediaType);
@@ -54,11 +54,11 @@ export default function GiverPersonalizationPage() {
       style={{ backgroundImage: "url(" + bgImg + ")" }}
     >
       <div className="absolute object-top px-6 pt-4 flex flex-row">
-        <Header
+        {/* <Header
           icon={faEarthAmericas}
           title={"PUBLIC SPACE"}
           subtitle={"For every future gift recipient"}
-        />
+        /> */}
       </div>
 
       {/* UI Overlay */}
