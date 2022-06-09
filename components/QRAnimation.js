@@ -2,7 +2,7 @@ export default function QRAnimation() {
   return (
     <div>
       <video
-        autoPlay
+        // autoPlay
         loop
         muted
         playsInline
