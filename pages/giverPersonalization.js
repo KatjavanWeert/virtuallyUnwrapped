@@ -162,7 +162,7 @@ export default function GiverPersonalizationPage() {
                 <PhotoFrame photo={selectedImage}>
                   {mediaType == "Text" && (
                     <textarea
-                      className="absolute p-10 bg-transparent text-center w-80 h-80 font-bold text-qrBlue text-lg"
+                      className="absolute p-10 bg-transparent text-center w-80 h-80 font-bold text-qrBlue text-2xl"
                       value={textUpload}
                       placeholder="Write your message here!"
                       onChange={(event) => {
