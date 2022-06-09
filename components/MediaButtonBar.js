@@ -35,10 +35,10 @@ export default function MediaButtonBar({ onUploadImage, onUploadText }) {
         {/* GIF button needs to be custom made as there is no free icon*/}
         <button
           onClick={() => logToConsole("Choose GIF")}
-          className="rounded-lg border-2 border-white w-12 h-12
+          className="rounded-lg border-2 border-qrBlue w-12 h-12
   active:bg-neutral-50/50 select-none"
         >
-          <p className="font-bold text-xl text-white pb-1">GIF</p>
+          <p className="font-bold text-xl text-qrBlue pb-1">GIF</p>
         </button>
       </div>
     </div>

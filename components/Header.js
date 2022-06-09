@@ -5,13 +5,13 @@ export default function Header({ icon, title, subtitle }) {
   return (
     <div className="w-full">
       <FontAwesomeIcon
-        className="text-white"
+        className="text-qrBlue-light"
         icon={icon}
         pull="left"
         transform="grow-10 down-10"
       />
-      <h1 className="text-3xl font-bold text-white pl-7">{title}</h1>
-      <h2 className="text-xl italic text-white pl-7">{subtitle}</h2>
+      <h1 className="text-3xl font-bold text-qrBlue-light pl-7">{title}</h1>
+      <h2 className="text-xl italic text-qrBlue-light pl-7">{subtitle}</h2>
     </div>
   );
 }
