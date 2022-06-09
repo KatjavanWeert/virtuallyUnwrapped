@@ -5,7 +5,6 @@ export default function QRAnimation() {
         autoPlay
         loop
         muted
-        controls
         playsInline
         type="video/mp4"
         src="/FloatingQR.mp4"
