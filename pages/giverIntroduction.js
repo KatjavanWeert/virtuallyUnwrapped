@@ -41,7 +41,7 @@ export default function GiverIntroductionPage() {
                 is your name?
               </FloatingText>
               <textarea
-                className="fixed bottom-20 h-10 align-middle bg-transparent text-center font-bold text-white text-xl"
+                className="fixed bottom-20 h-10 align-middle bg-qrBlue opacity-80 text-center rounded-md shadow-md font-bold text-white text-xl"
                 value={giverName}
                 placeholder="Your name"
                 onChange={(event) => {
@@ -54,7 +54,7 @@ export default function GiverIntroductionPage() {
             <>
               <FloatingText>Who do you want to give the gift to?</FloatingText>
               <textarea
-                className="fixed bottom-20 h-10 align-middle bg-transparent text-center font-bold text-white text-xl"
+                className="fixed bottom-20 h-10 align-middle bg-qrBlue opacity-80 text-center rounded-md shadow-md font-bold text-white text-xl"
                 value={receiverName}
                 placeholder="The receiver's name"
                 onChange={(event) => {
