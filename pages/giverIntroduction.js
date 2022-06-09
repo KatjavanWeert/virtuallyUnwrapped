@@ -19,7 +19,7 @@ export default function GiverIntroductionPage() {
   return (
     <div className="relative h-screen w-full">
       {/* QR Animation */}
-      <div className={"transition ease-in " + opacityQR}>
+      <div>
         <QRAnimation />
       </div>
 
